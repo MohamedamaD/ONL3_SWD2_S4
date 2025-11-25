@@ -17,6 +17,10 @@ app.use("/auth", authRoutes);
 app.use("/products", productRoutes);
 app.use("/reviews", reviewRoutes);
 
+app.get("/", (request, response) => {
+  response.send("Hello World!");
+});
+
 const PORT = process.env.PORT || 8080;
 
 connectToDatabase();
